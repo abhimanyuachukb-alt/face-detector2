@@ -1,0 +1,13 @@
+{
+  "name": "Face Detector",
+  "description": "Real-time face detection application ported from Android to React, featuring client-side on-device face detection with bounding box overlay.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "permissions": [
+    "camera"
+  ],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

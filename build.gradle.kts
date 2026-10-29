@@ -1,4 +1,12 @@
-plugins {
-    id("com.android.application") version "8.5.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
+tasks.register<Exec>("npmBuild") {
+    environment("PATH", "/usr/local/bin:/usr/bin:/bin:" + System.getenv("PATH"))
+    commandLine("npm", "run", "build")
+}
+
+tasks.register("assembleDebug") {
+    dependsOn("npmBuild")
+}
+
+tasks.register("build") {
+    dependsOn("npmBuild")
 }
